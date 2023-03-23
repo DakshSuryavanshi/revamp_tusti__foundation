@@ -1,0 +1,12 @@
+/* body {
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+} 
+*/
+
+.bg-light {
+  --bs-bg-opacity: 0;
+}
