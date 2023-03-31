@@ -4,9 +4,796 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TUSTI FOUNDATION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link href="assets\dist\css\bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+
+<!-- Custom styles for this template -->
+<link href="carousel.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Gallery</h1>
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .navbar-nav>li {
+        padding: 0 32px;
+        font-weight: 900;
+    }
+
+    .donatenow {
+        background-color: #023047;
+        color: white;
+        font-weight: 900;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .logo {
+        height: 55px;
+        width: 55px;
+        border-radius: 9px;
+    }
+
+    .bg-light {
+        --bs-bg-opacity: 0;
+    }
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        height: 314px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        outline: none;
+    }
+
+    a,
+    a:active,
+    a:focus {
+        color: #333;
+        text-decoration: none;
+        transition-timing-function: ease-in-out;
+        -ms-transition-timing-function: ease-in-out;
+        -moz-transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        transition-duration: .2s;
+        -ms-transition-duration: .2s;
+        -moz-transition-duration: .2s;
+        -webkit-transition-duration: .2s;
+        -o-transition-duration: .2s;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    section {
+        padding: 60px 0;
+        /* min-height: 100vh;*/
+    }
+
+    .footer {
+        background: linear-gradient(105deg, #a2aaba, #093c94);
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    /*END FOOTER SOCIAL DESIGN*/
+
+    @media only screen and (max-width:768px) {
+        .single_footer {
+            margin-bottom: 30px;
+        }
+    }
+
+    .single_footer h4 {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .single_footer h4::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 40px;
+        background: #fff;
+        margin-top: 20px;
+    }
+
+    .single_footer p {
+        color: #fff;
+    }
+
+    .single_footer ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+
+    .single_footer ul li a {
+        color: #fff;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        line-height: 36px;
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+
+    .single_footer ul li a:hover {
+        color: #ff3666;
+    }
+
+
+    .single_footer_address ul li {
+        color: #fff;
+    }
+
+    .single_footer_address ul li span {
+        font-weight: 400;
+        color: #fff;
+        line-height: 28px;
+    }
+
+    .contact_social ul {
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*START NEWSLETTER CSS*/
+    .subscribe {
+        display: block;
+        position: relative;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .subscribe__input {
+        background-color: #fff;
+        border: medium none;
+        border-radius: 5px;
+        color: #333;
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+        height: 60px;
+        letter-spacing: 0.4px;
+        margin: 0;
+        padding: 0 150px 0 20px;
+        text-align: center;
+        text-transform: capitalize;
+        width: 100%;
+    }
+
+    @media only screen and (max-width:768px) {
+        .subscribe__input {
+            padding: 0 50px 0 20px;
+        }
+    }
+
+    .subscribe__btn {
+        background-color: transparent;
+        border-radius: 0 25px 25px 0;
+        color: #01c7e9;
+        cursor: pointer;
+        display: block;
+        font-size: 20px;
+        height: 60px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+    }
+
+    .subscribe__btn i {
+        transition: all 0.3s ease 0s;
+    }
+
+    @media only screen and (max-width:768px) {
+        .subscribe__btn {
+            right: 0px;
+        }
+    }
+
+    .subscribe__btn:hover i {
+        color: #ff3666;
+    }
+
+    button {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+    /*END NEWSLETTER CSS*/
+
+    /*START SOCIAL PROFILE CSS*/
+    .social_profile {
+        margin-top: 40px;
+    }
+
+    .social_profile ul {
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .social_profile ul li {
+        float: left;
+    }
+
+    .social_profile ul li a {
+        text-align: center;
+        border: 0px;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+        margin: 0px 5px;
+        font-size: 18px;
+        color: #fff;
+        border-radius: 30px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @media only screen and (max-width:768px) {
+        .social_profile ul li a {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media only screen and (max-width:480px) {
+        .social_profile ul li a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+
+    .social_profile ul li a:hover {
+        background: #ff3666;
+        border: 1px solid #ff3666;
+        color: #fff;
+        border: 0px;
+    }
+
+    /*END SOCIAL PROFILE CSS*/
+    .copyright {
+        margin-top: 70px;
+        padding-top: 40px;
+        color: #fff;
+        font-size: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        text-align: center;
+    }
+
+    .copyright a {
+        color: #01c7e9;
+        transition: all 0.2s ease 0s;
+    }
+
+    .copyright a:hover {
+        color: #ff3666;
+    }
+
+    /* starting with carousel and navabar */
+
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+        bottom: 3rem;
+        z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+        height: 100vh;
+        /* set initial height to viewport height */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+
+    .gallery{
+      display: flex;
+      justify-content: center;
+      top: 40px;
+      align-items: center;
+     
+    }
+    
+    .gallery-section{
+      position: relative;
+    }
+    .gallery-section img{
+      width: 150%;
+      height: 40%;
+      position: absolute;
+    }
+    .Image1{
+      left: 5em;
+    }
+    .Image2{
+      left: 10rem;
+      top: 1rem;
+    }
+    .Image3{
+      left: 15rem;
+      top: 2rem;
+    }
+    .gallery-section img:hover{
+      z-index:20;
+      
+    }
+    .gallery-section:hover img:not(:hover){
+      transform:scale(.9)
+    }
+    @media screen and (max-width:500px){
+      .Image1{
+        left:5rem;
+      }
+      .Image2{
+        left:7rem;
+      }
+      .Image3{
+        left:10rem;
+      }
+    }
+    .gallery-item-1:hover{
+      transform: scale(1.1);
+    }
+    .gallery-item{
+      border-radius: 0%;
+       margin-top: 50;
+       margin-left: 50;
+       margin-right: 50;
+       margin-bottom: 50;
+       height: 70vh;
+       transition: transform 0.3s ease-in-out;
+    }
+</style>
+<div class="navi">
+<nav class="navbar navbar-expand-lg bg-light opa rounded" aria-label="Thirteenth navbar example">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
+            aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+            <div class="navbar-brand col-lg-3 me-0" href="#"><img class="logo" src="img/TUSTI.png" alt=""></div>
+            <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"
+                        aria-expanded="false">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        <li><a class="dropdown-item" href="aim.html">Our Aim</a></li>
+                        <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html">Contact Us</a>
+                </li>
+
+            </ul>
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                <button class="btn donatenow" onclick="window.location.href='donation.html'">DONATE NOW</button>
+            </div>
+        </div>
+    </div>
+</nav>
+</div>
+
+  <body>
+    <main>
+
+        <section class="py-5 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-bold">GALLERY</h1>
+              <p class="lead text-muted">"Photography is a way of feeling, of touching, of loving. What you have caught on
+                film is captured forever... it remembers little things, long after you have forgotten everything."</p>
+              <p>
+                <!-- <a href="#" class="btn btn-primary my-2">Main call to action</a> -->
+                <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
+              </p>
+            </div>
+          </div>
+        </section>
+    
+        <div class="album py-5 bg-light">
+            <div class="container">
+      
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="galimg/1.jpg" alt="">
+                    <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                      role="img"  aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <title>Placeholder</title> -->
+                      <!-- <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em"></text> -->
+                    </svg>
+                    <div class="card-body">
+                      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p> -->
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="galimg/2.jpg" alt="">
+                    <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">Thumbnail</text> -->
+                    </svg>
+                    <div class="card-body">
+                      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p> -->
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="galimg/3.jpg"class="bd-placeholder-img card-img-top" width="10%" height="270" xmlns="http://www.w3.org/2000/svg" 
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <!-- <title>Placeholder</title> -->
+                      <!-- <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">Thumbnail</text> -->
+                    </img>
+                    <div class="card-body">
+                      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p> -->
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="galimg/4.jpg" alt="">
+                    <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">Thumbnail</text>
+                    </svg> -->
+                    <div class="card-body">
+                      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p> -->
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="galimg/5.jpg" alt="">
+                    <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">Thumbnail</text>
+                    </svg> -->
+                    <div class="card-body">
+                      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p> -->
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="galimg/6.jpg"class="bd-placeholder-img card-img-top" width="10%" height="270" xmlns="http://www.w3.org/2000/svg" 
+                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <!-- <title>Placeholder</title> -->
+                    <!-- <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                      dy=".3em">Thumbnail</text> -->
+                  </img>
+                    <div class="card-body">
+                      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p> -->
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="galimg/7.jpg" alt="">
+                    <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">Thumbnail</text>
+                    </svg> -->
+                    <div class="card-body">
+                      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p> -->
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    
+                    <img src="galimg/8.jpg" class="bd-placeholder-img card-img-top" width="10%" height="270" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    </img>
+                    <div class="card-body">
+                      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p> -->
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="galimg/9.jpg" alt="">
+                    <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                      role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">Thumbnail</text>
+                    </svg> -->
+                    <div class="card-body">
+                      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p> -->
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </main>
 </body>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+                <div class="single_footer">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing </a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div><!--- END COL -->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="single_footer single_footer_address">
+                    <h4>Page Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing </a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div><!--- END COL -->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="single_footer single_footer_address">
+                    <h4>Subscribe today</h4>
+                    <div class="signup_form">
+                        <form action="#" class="subscribe">
+                            <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                            <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social_profile">
+                    <ul>
+                        <li><a href="#facebook" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#twitter" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#linkedin" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#google" class="google"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#instagram" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <p class="copyright">© 2022 Company,
+
+                    <a href="#">Inc. All rights reserved.</a>.
+                </p>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+</div>
 </html>
