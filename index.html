@@ -426,11 +426,133 @@
             /* justify-content: center; */
             /* align-items: center; */
         }
+
+        .sponsors {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .sponimg {
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            margin-right: 0px;
+            ;
+            display: flex;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding: 0% 3%;
+        }
+
+        .simg {
+            width: 350px;
+            height: 152px;
+            border-radius: 4px;
+            box-shadow: none;
+            height: auto;
+            max-width: 100%;
+            vertical-align: top;
+            margin: 20px;
+            padding: 15px 15px;
+        }
+
+        .articles {
+            display: grid;
+            max-width: 1200px;
+            margin-inline: auto;
+            padding-inline: 24px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        article {
+            --img-scale: 1.001;
+            --title-color: rgb(188, 188, 188);
+            --link-icon-translate: -20px;
+            --link-icon-opacity: 0;
+            position: relative;
+            border-radius: 16px;
+            box-shadow: none;
+            background: #fff;
+            transform-origin: center;
+            transition: all 0.4s ease-in-out;
+            overflow: hidden;
+        }
+
+        article a::after {
+            position: absolute;
+            inset-block: 0;
+            inset-inline: 0;
+            cursor: pointer;
+            content: "";
+        }
+
+        /* basic article elements styling */
+        article h2 {
+            margin: 0 0 18px 0;
+            font-family: "Bebas Neue", cursive;
+            font-size: 1.9rem;
+            letter-spacing: 0.06em;
+            color: var(--title-color);
+            transition: color 0.3s ease-out;
+        }
+
+        figure {
+            margin: 0;
+            padding: 0;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+
+        article img {
+            max-width: 100%;
+            transform-origin: center;
+            transform: scale(var(--img-scale));
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .article-body {
+            padding: 24px;
+        }
+
+        article a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #28666e;
+        }
+
+        article a:focus {
+            outline: 1px dotted #28666e;
+        }
+
+        article a .icon {
+            min-width: 24px;
+            width: 24px;
+            height: 24px;
+            margin-left: 5px;
+            transform: translateX(var(--link-icon-translate));
+            opacity: var(--link-icon-opacity);
+            transition: all 0.3s;
+        }
+
+        /* using the has() relational pseudo selector to update our custom properties */
+        article:has(:hover, :focus) {
+            --img-scale: 1.1;
+            --title-color: #28666e;
+            --link-icon-translate: 0;
+            --link-icon-opacity: 1;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        .section-2{
+            margin-top: 43px;
+        }
     </style>
 
 
     <!-- Custom styles for this template -->
-    <link href="navbars.css" rel="stylesheet">
+    <!-- <link href="navbars.css" rel="stylesheet"> -->
     <link href="carousel.css" rel="stylesheet">
 </head>
 
@@ -478,7 +600,7 @@
 
 <body>
 
-    <div id="myCarousel" class="carousel slide car" data-bs-ride="carousel">
+    <div id="myCarousel" class="carousel slide car my-carousel" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
                 aria-label="Slide 1"></button>
@@ -487,7 +609,10 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img width="100%" src="img/c1.jpg" alt="">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" />
+                </svg>
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>Example headline.</h1>
@@ -533,119 +658,113 @@
         </button>
     </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius cumque Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quidem voluptates possimus doloribus ipsa animi aperiam cupiditate illo ad, tempore pariatur
-        distinctio nam corporis ratione! Libero nihil sint hic mollitia id fuga porro? Quibusdam voluptate et alias nisi
-        ullam accusantium labore dolor dolorum aliquam modi? Soluta unde aspernatur maiores laboriosam eaque? Blanditiis
-        fugiat accusamus ex laudantium quae pariatur eos officia, velit est quas qui voluptas quibusdam culpa minus ipsa
-        unde. Laudantium accusantium explicabo, deleniti iusto hic ex debitis eligendi optio neque obcaecati rem
-        mollitia
-        voluptatibus dolorem commodi dignissimos omnis asperiores quis? Non quaerat tenetur modi delectus possimus iure
-        fugiat assumenda voluptate? Quod et eius cupiditate corrupti ex soluta. Laboriosam architecto id error
-        praesentium
-        ullam quos veritatis asperiores eaque, esse, officiis expedita at consequatur iure doloribus quo fugit facere
-        repellat sed reprehenderit sequi saepe in eveniet! Quibusdam, explicabo. Necessitatibus, est quam animi culpa
-        porro
-        officiis fugiat nihil qui laborum eaque ipsum reprehenderit totam suscipit deleniti dolorum dicta, in molestias
-        saepe, distinctio commodi! Hic id sit dolores, alias accusamus laborum eos vero, aliquam at ea ducimus rem
-        exercitationem? Alias architecto, perspiciatis nemo delectus repellendus soluta tenetur eligendi eius,
-        reiciendis
-        minus corrupti repudiandae deleniti esse, animi quia magnam fuga Lorem, ipsum dolor sit amet consectetur
-        adipisicing
-        elit. Voluptas deserunt saepe aliquam, quisquam corporis excepturi itaque rerum magnam odit recusandae eveniet.
-        Beatae voluptatem hic aspernatur similique qui, voluptatum laboriosam ratione perspiciatis odio dignissimos
-        officiis
-        possimus! Tempora obcaecati rem repudiandae et labore corporis deserunt laboriosam! Reiciendis quae, odio odit
-        tempore ipsum omnis quia, aliquid voluptatum at error facere quam illo sequi natus quod. Vitae et alias porro
-        temporibus. Repellendus quaerat deserunt sunt cupiditate incidunt delectus perferendis veniam, pariatur
-        reprehenderit placeat repudiandae, mollitia, adipisci facere repellat praesentium. Nulla odio adipisci nam dolor
-        id
-        quae voluptas in commodi sapiente nisi laborum corrupti, reiciendis necessitatibus accusamus. Magni, at debitis
-        a
-        nisi excepturi eaque ea nesciunt sunt repudiandae dignissimos eveniet enim maiores esse corporis velit quibusdam
-        eius ratione, labore adipisci, rerum tenetur ipsam corrupti eum. Earum ea aliquam vel inventore quos,
-        repellendus
-        voluptates non eaque, saepe doloribus suscipit reiciendis similique totam rem accusamus. Rerum voluptatem quo,
-        nisi
-        voluptas, blanditiis incidunt vitae aut voluptatibus a aspernatur soluta quisquam! Nemo iste explicabo suscipit
-        deserunt voluptatum sit blanditiis quam ad temporibus nam modi nihil, itaque animi fuga ab soluta alias ex illo
-        placeat quos rerum. Assumenda eveniet fuga deserunt porro incidunt ipsum iusto, reprehenderit ad excepturi,
-        ipsam
-        minus quam nisi. Mollitia dolores provident blanditiis velit doloremque! Earum, tempora architecto. Distinctio
-        suscipit facilis qui voluptatibus, dignissimos veritatis repellendus exercitationem animi porro. Ullam, saepe
-        qui
-        eum sunt itaque nulla tempore explicabo! Nisi minima, aperiam dolore repellendus quisquam suscipit quidem
-        voluptates
-        iure explicabo dolor. Aperiam pariatur officia ullam ipsum, molestias voluptatum maxime praesentium voluptas
-        quos
-        eligendi rem at numquam asperiores omnis in odio voluptate! Temporibus, natus. Quod facilis, soluta quam aperiam
-        nobis sed neque quas ullam enim ab explicabo consectetur odit odio ipsa provident sequi tempora! Earum
-        consequuntur
-        aliquid velit ad quia vero fuga voluptatum quas commodi, placeat dignissimos. Lorem ipsum dolor, sit amet
-        consectetur adipisicing elit. Reprehenderit impedit doloribus ipsum voluptate iure ut sed rerum distinctio
-        natus,
-        vel doloremque voluptas voluptatum placeat quisquam dicta nobis! Quibusdam voluptates saepe quia debitis quae
-        reprehenderit hic dignissimos perferendis, deleniti iste qui quidem rerum vero aliquid incidunt exercitationem
-        nulla
-        maiores labore neque. Nemo debitis voluptate exercitationem recusandae aspernatur quo perspiciatis itaque
-        eveniet
-        blanditiis. Officiis quidem praesentium illum a pariatur non nam molestias obcaecati? Sequi ipsa magni, esse qui
-        ea
-        fuga, velit debitis veritatis molestiae minus aut maiores tempore corrupti reiciendis maxime laborum architecto
-        non
-        adipisci? Nostrum perferendis odio provident ab facilis in natus asperiores similique dolorem voluptate amet
-        laudantium harum dolorum ea blanditiis possimus maiores esse architecto, illo est molestiae. Tenetur nostrum
-        veniam
-        fugiat, commodi nesciunt doloribus corporis deserunt! Voluptas numquam ducimus quasi ex natus, quisquam debitis
-        harum unde accusantium hic cumque facilis excepturi nemo cupiditate impedit totam, nulla sunt ullam illum
-        corporis!
-        Eum delectus neque ab, nisi sapiente sint possimus incidunt odio dolorem commodi tempora pariatur numquam
-        officia
-        dolorum nostrum quia odit laudantium modi, ipsa voluptatem deserunt. Impedit consequuntur voluptatem nobis optio
-        harum illum adipisci, voluptates repellat ullam velit assumenda explicabo ratione molestiae iste totam ea
-        voluptate
-        alias a, error illo accusamus vero incidunt. Qui quas repudiandae, voluptatibus facilis libero dicta explicabo
-        expedita deleniti hic iusto ullam maiores dolorum consectetur aspernatur eligendi omnis numquam fugiat? Tempora
-        enim
-        voluptas fuga delectus fugiat deleniti magnam praesentium nobis omnis earum vitae harum fugit consequuntur, et
-        dolorem doloribus saepe alias. Soluta, consectetur nisi consequuntur necessitatibus minus ad et inventore
-        quaerat
-        sint provident exercitationem cumque, dignissimos nostrum iure tempora laboriosam quis eveniet obcaecati nobis
-        maxime. Unde totam possimus necessitatibus quia quibusdam impedit voluptatum ab! Ea omnis sunt tempora vitae
-        consectetur atque temporibus amet eligendi eius et dolorem delectus aspernatur a consequatur quam consequuntur,
-        nemo
-        minima sint, assumenda animi hic officia. Facilis aliquid aspernatur rem dignissimos, harum veniam corrupti et
-        quis
-        doloribus expedita, dolor minima dolorem delectus unde suscipit maxime nemo doloremque quod debitis quisquam ea
-        at.
-        Aspernatur non nulla corrupti quidem! Atque numquam sed, cupiditate nostrum soluta temporibus, aperiam quia
-        error
-        quae praesentium dolorem! Excepturi culpa consequatur totam hic eligendi qui atque error commodi. Quod aliquid
-        quos
-        nihil commodi! Laudantium sint magni voluptatum velit ut! Omnis nisi sequi asperiores ea eius debitis quasi
-        laboriosam expedita, suscipit illo maiores dicta officia consectetur impedit in necessitatibus laudantium! Quia
-        distinctio impedit corrupti ipsum necessitatibus, ratione saepe iusto eveniet quam earum facere explicabo
-        voluptates
-        sapiente accusamus ex cum expedita deserunt quisquam nostrum aliquid exercitationem doloribus. Id eligendi odio
-        provident fugiat adipisci fugit tempora, praesentium rem sed rerum reprehenderit vel accusantium accusamus,
-        inventore modi necessitatibus, ipsam consequatur ratione cumque omnis voluptatum eos! Quod, at fugit! Est saepe,
-        corporis quisquam voluptatem aliquid reprehenderit modi, ex pariatur officiis odit numquam dolores odio
-        accusantium
-        delectus sint quaerat deserunt quod ducimus nostrum quis ipsum non sit quo. Error provident corporis iusto
-        nostrum
-        reiciendis odit accusamus laboriosam temporibus nulla aliquam itaque vero eos esse earum, similique libero
-        beatae?
-        In, delectus officia dolorum et suscipit soluta. Repudiandae! Iusto, perspiciatis. vero fugiat excepturi dolore
-        assumenda? dolore exercitationem, ullam quam adipisci odio velit totam quia! Perferendis ea odio asperiores,
-        culpa
-        eaque voluptate voluptatem qui vel velit. Iste ab commodi dolorem placeat recusandae aspernatur, ipsum
-        repudiandae
-        quibusdam! Quo corporis ut ipsa repudiandae quia sed blanditiis iure reiciendis laborum similique pariatur illum
-        aliquam tempora voluptatum, quisquam sunt eligendi fuga ullam qui et est. Totam iste laboriosam odio nisi hic!
-        Voluptates eligendi beatae omnis recusandae molestiae numquam, eaque excepturi facere nulla commodi deleniti
-        modi
-        minima, quo sint sed similique? Praesentium deserunt sapiente assumenda architecto quas, culpa quod obcaecati
-        similique.</p>
+    <section class="section-2  p-0">
+        <div class="cover">
+            <div class="content text-center">
+                <h1>Some Features That Made Us Unique</h1>
+                <p class="text-secondary">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eum?
+                </p>
+            </div>
+        </div>
+        <section class="articles">
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img src="img\feature\3.jpg" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>Events</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue
+                            bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet
+                            egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img width="368" height="207" src="img\feature\download.jpg" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>Hackathon</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue
+                            bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet
+                            egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img width="368" height="207" src="img\feature\avg.jpg" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>Competitive coding</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue
+                            bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet
+                            egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </section>
+
+    <section class="sponsors">
+        <div class="content text-center">
+            <h2 text-align="center">SPONSORS AND ASSOCIATES</h2>
+        </div>
+        <div class="sponimg">
+            <div class="img1">
+                <img class="simg" src="img/main_logo.png" alt="ssim">
+            </div>
+            <div class="img2">
+                <img class="simg" src="img/MOLogo.png" alt="agritech">
+            </div>
+            <div class="img3">
+                <img class="simg" src="img/tp-agri-logo.png" alt="Skyfield-Agritech">
+            </div>
+            <div class="img4">
+                <img class="simg" src="img/Skyfield-Agritech.png" alt="Mangosorange">
+            </div>
+        </div>
+    </section>
 
 
     <div class="footer">
