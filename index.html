@@ -427,6 +427,12 @@
             /* align-items: center; */
         }
 
+        .carousel img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
         .sponsors {
             margin-top: 50px;
             margin-bottom: 50px;
@@ -558,6 +564,42 @@
         body{
             overflow-x: hidden;
         }
+
+        /* making sponsors responsive */
+
+        /* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .sponimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .simg {
+    max-width: 100%;
+    height: auto;
+    width: 231px;
+    margin-bottom: 20px;
+  }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 769px) {
+  .sponimg {
+    display: flex;
+    justify-content: center;
+  }
+  .img1, .img2, .img3, .img4 {
+    margin-right: 20px;
+  }
+  .img4 {
+    margin-right: 0;
+  }
+  .simg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
     </style>
 
 
@@ -619,10 +661,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
-                </svg>
+                <img src="img/cc2.jpg" alt="">
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>Covid-19 Releif</h1>
@@ -632,10 +671,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
-                </svg>
+                <img src="img/cc1.jpg" alt="">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Independence Day Awareness Camp</h1>
@@ -645,10 +681,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
-                </svg>
+                <img src="img/cc3.jpg" alt="">
                 <div class="container">
                     <div class="carousel-caption text-end">
                         <h1>One more for good measure.</h1>
