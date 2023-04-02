@@ -1,12 +1,687 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Our Team Section</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="team_css.css" />
+    <title>TUSTI FOUNDATION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link href="assets\dist\css\bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+
+<!-- Custom styles for this template -->
+<link href="carousel.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Our Team</h1>
-</body>
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .navbar-nav>li {
+        padding: 0 32px;
+        font-weight: 900;
+    }
+
+    .donatenow {
+        background-color: #023047;
+        color: white;
+        font-weight: 900;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .logo {
+        height: 55px;
+        width: 55px;
+        border-radius: 9px;
+    }
+
+    .bg-light {
+        --bs-bg-opacity: 0;
+    }
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        outline: none;
+    }
+
+    a,
+    a:active,
+    a:focus {
+        color: #333;
+        text-decoration: none;
+        transition-timing-function: ease-in-out;
+        -ms-transition-timing-function: ease-in-out;
+        -moz-transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        transition-duration: .2s;
+        -ms-transition-duration: .2s;
+        -moz-transition-duration: .2s;
+        -webkit-transition-duration: .2s;
+        -o-transition-duration: .2s;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    section {
+        padding: 60px 0;
+        /* min-height: 100vh;*/
+    }
+
+    .footer {
+        background: linear-gradient(105deg, #a2aaba, #093c94);
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    /*END FOOTER SOCIAL DESIGN*/
+
+    @media only screen and (max-width:768px) {
+        .single_footer {
+            margin-bottom: 30px;
+        }
+    }
+
+    .single_footer h4 {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .single_footer h4::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 40px;
+        background: #fff;
+        margin-top: 20px;
+    }
+
+    .single_footer p {
+        color: #fff;
+    }
+
+    .single_footer ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+
+    .single_footer ul li a {
+        color: #fff;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        line-height: 36px;
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+
+    .single_footer ul li a:hover {
+        color: #ff3666;
+    }
+
+
+    .single_footer_address ul li {
+        color: #fff;
+    }
+
+    .single_footer_address ul li span {
+        font-weight: 400;
+        color: #fff;
+        line-height: 28px;
+    }
+
+    .contact_social ul {
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*START NEWSLETTER CSS*/
+    .subscribe {
+        display: block;
+        position: relative;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .subscribe__input {
+        background-color: #fff;
+        border: medium none;
+        border-radius: 5px;
+        color: #333;
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+        height: 60px;
+        letter-spacing: 0.4px;
+        margin: 0;
+        padding: 0 150px 0 20px;
+        text-align: center;
+        text-transform: capitalize;
+        width: 100%;
+    }
+
+    @media only screen and (max-width:768px) {
+        .subscribe__input {
+            padding: 0 50px 0 20px;
+        }
+    }
+
+    .subscribe__btn {
+        background-color: transparent;
+        border-radius: 0 25px 25px 0;
+        color: #01c7e9;
+        cursor: pointer;
+        display: block;
+        font-size: 20px;
+        height: 60px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+    }
+
+    .subscribe__btn i {
+        transition: all 0.3s ease 0s;
+    }
+
+    @media only screen and (max-width:768px) {
+        .subscribe__btn {
+            right: 0px;
+        }
+    }
+
+    .subscribe__btn:hover i {
+        color: #ff3666;
+    }
+
+    button {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+    /*END NEWSLETTER CSS*/
+
+    /*START SOCIAL PROFILE CSS*/
+    .social_profile {
+        margin-top: 40px;
+    }
+
+    .social_profile ul {
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .social_profile ul li {
+        float: left;
+    }
+
+    .social_profile ul li a {
+        text-align: center;
+        border: 0px;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+        margin: 0px 5px;
+        font-size: 18px;
+        color: #fff;
+        border-radius: 30px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @media only screen and (max-width:768px) {
+        .social_profile ul li a {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media only screen and (max-width:480px) {
+        .social_profile ul li a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+
+    .social_profile ul li a:hover {
+        background: #ff3666;
+        border: 1px solid #ff3666;
+        color: #fff;
+        border: 0px;
+    }
+
+    /*END SOCIAL PROFILE CSS*/
+    .copyright {
+        margin-top: 70px;
+        padding-top: 40px;
+        color: #fff;
+        font-size: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        text-align: center;
+    }
+
+    .copyright a {
+        color: #01c7e9;
+        transition: all 0.2s ease 0s;
+    }
+
+    .copyright a:hover {
+        color: #ff3666;
+    }
+
+    /* starting with carousel and navabar */
+
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+        bottom: 3rem;
+        z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+        height: 100vh;
+        /* set initial height to viewport height */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+</style>
+<div class="navi">
+<nav class="navbar navbar-expand-lg bg-light opa rounded" aria-label="Thirteenth navbar example">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
+            aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+            <div class="navbar-brand col-lg-3 me-0" href="#"><img class="logo" src="img/TUSTI.png" alt=""></div>
+            <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"
+                        aria-expanded="false">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        <li><a class="dropdown-item" href="aim.html">Our Aim</a></li>
+                        <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html">Contact Us</a>
+                </li>
+
+            </ul>
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                <button class="btn donatenow" onclick="window.location.href='donation.html'">DONATE NOW</button>
+            </div>
+        </div>
+    </div>
+</nav>
+</div>
+  <body>
+    <section>
+      <div class="row">
+        <h1>Our Team</h1>
+      </div>
+      <div class="row">
+        <!-- Column 1-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="amit.jpg" />
+            </div>
+            <h3>Amit Giri</h3>
+            <p>FOUNDER</p>
+            <p class="quote">"World is full of friends waiting to meet you,let us have a privilege to hug each other."</p>
+            <div class="icons">
+              <a href="twitter.com" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/amit-giri-506721267/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.facebook.com/tustifoundation" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="mailto:amitgiri2002@yahoo.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Column 2-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="sukhjinder.jpg" />
+            </div>
+            <h3>Mr.Sukhjinder</h3>
+            <p>PUNJAB STATE COORDINATOR</p>
+            <p class="quote">"Lorem ipsum dolor sit amet."</p>
+            <div class="icons">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Column 3-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="daksh.jpg" />
+            </div>
+            <h3>Daksh Suryavanshi</h3>
+            <p>TEACHNICAL LEAD</p>
+            <p class="quote">"Technical leadership is not just about knowing the technology, it's about understanding the people who use it."</p>
+            <div class="icons">
+              <a href="https://twitter.com/DakshSuryavansh" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/daksh-suryavanshi/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/DakshSuryavanshi" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:dakshsuryavanshi2003@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Column 1-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="rashi.jpg" />
+            </div>
+            <h3>Rashi Gupta</h3>
+            <p class="pos">WEB DEVELOPER</p>
+            <p class="quote">"Lorem ipsum dolor sit amet."</p>
+            <div class="icons">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/rashigupta321/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/rashigupta12" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Column 2-->
+        <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="profile-img-3.png" />
+            </div>
+            <h3>Nandni Sharma</h3>
+            <p>CONTENT/MANAGMENT LEAD</p>
+            <p class="quote">"Lorem ipsum dolor sit amet."</p>
+            <div class="icons">
+              <a href="twitter.com">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/nandni-sharma-082560209" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/Nandni-17" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:nandni17sharma@gmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Column 3-->
+        <!-- <div class="column">
+          <div class="card">
+            <div class="img-container">
+              <img src="profile-img-3.png" />
+            </div>
+            <h3>Hope Watkins</h3>
+            <p>Designer</p>
+            <div class="icons">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+  </body>
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4 col-xs-12">
+                <div class="single_footer">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing </a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div><!--- END COL -->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="single_footer single_footer_address">
+                    <h4>Page Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing </a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div><!--- END COL -->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="single_footer single_footer_address">
+                    <h4>Subscribe today</h4>
+                    <div class="signup_form">
+                        <form action="#" class="subscribe">
+                            <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                            <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social_profile">
+                    <ul>
+                        <li><a href="#facebook" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#twitter" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#linkedin" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#google" class="google"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#instagram" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <p class="copyright">© 2022 Company,
+
+                    <a href="#">Inc. All rights reserved.</a>.
+                </p>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+</div>
+
+
+
+<script src="assets\dist\js\bootstrap.bundle.min.js"></script>
+
 </html>
