@@ -417,14 +417,157 @@
         /* justify-content: center; */
         /* align-items: center; */
     }
+    .topbar {
+            background-color: #f6f5f2;
+        }
+
+        @media (max-width: 991px) {
+            .topbar {
+                display: none;
+            }
+        }
+
+        .topbar .container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .topbar__left {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .topbar__left p {
+            font-size: 12px;
+            font-weight: 500;
+            color: #6e7673;
+            margin: 0;
+        }
+
+        .topbar__social {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        .topbar__social a {
+            color: #6e7673;
+            font-size: 12px;
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            line-height: 38px;
+        }
+
+        .topbar__social a:hover {
+            color: var(--thm-primary);
+        }
+
+        .topbar__social a+a {
+            margin-left: 20px;
+        }
+
+        .topbar__right {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .topbar__right>a {
+            color: #6e7673;
+            font-size: 12px;
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .topbar__right>a+a {
+            margin-left: 30px;
+        }
+
+        .topbar__right>a>i {
+            font-size: 14px;
+            color: var(--thm-base);
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+            margin-right: 10px;
+        }
+
+        .topbar__right>a:hover {
+            color: var(--thm-base);
+        }
+
+        .topbar__right>a:hover>i {
+            color: var(--thm-black);
+        }
+
+        .main-menu .logo-box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
 </style>
-<div class="navi">
-    <nav class="navbar navbar-expand-lg bg-light opa rounded" aria-label="Thirteenth navbar example">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
-                aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
+<body>
+    <header>
+        <div class="topbar">
+            <div class="container">
+                <div class="topbar__left">
+                    <div class="topbar__social ">
+                            <a href="facebook">  <i class="fa fa-facebook"></i></a>
+                            <a href="twitter">  <i class="fa fa-twitter"></i></a>
+                            <a href="linkedin">  <i class="fa fa-linkedin"></i></a>
+                            <a href="instagram">  <i class="fa fa-instagram"></i></a>
+                            <a href="google">  <i class="fa fa-google"></i></a>
+                    </div>
+                </div><!-- /.topbar__left -->
+                <div class="topbar__right">
+                    <a href="mailto: tustifoundation2k23"> tustifoundation2k23</a> 
+                    <a href="tel:+91 7417698965 ">+91 7417698965</a>
+                </div><!-- /.topbar__right -->
+            </div><!-- /.container -->
+        </div><!-- /.topbar -->
+        <div class="navi">
+            <nav class="navbar navbar-expand-lg bg-light opa rounded" aria-label="Thirteenth navbar example">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
             <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
                 <div class="navbar-brand col-lg-3 me-0" href="#"><img class="logo" src="img/TUSTI.png" alt=""></div>
