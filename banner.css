@@ -1,0 +1,14 @@
+.ban_img {
+    display: block;
+    margin: auto;
+    height: 400px;
+    max-width: 100%;
+}
+
+/* Adjust image size for smaller screen sizes */
+@media only screen and (max-width: 767px) {
+    .ban_img {
+        height: 200px;
+        max-width: 100%;
+    }
+}
