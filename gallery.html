@@ -67,7 +67,7 @@
     }
 
     .navbar-nav>li {
-        padding: 0 7px;
+        padding: 0 3px;
         font-weight: 900;
     }
 
@@ -616,60 +616,63 @@
           </div><!-- /.container -->
       </div><!-- /.topbar -->
       <div class="navi">
-          <nav class="navbar navbar-expand-lg bg-light opa rounded" aria-label="Thirteenth navbar example">
-              <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
-                      aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
+        <nav class="navbar navbar-expand-lg bg-light opa rounded" aria-label="Thirteenth navbar example">
+            <div class="container-fluid">
+                <div class="navbar-brand" href="#"><img class="logo" src="img/TUSTI.png" alt=""></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- <div class="navbar-brand col-lg-3 me-0" href="#"><img class="logo" src="img/TUSTI.png" alt=""></div> -->
+                <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+                    <div class="navbar-brand col-lg-3 me-0" href="#"></div>
+                    <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="aim.html" data-bs-toggle="dropdown"
+                                aria-expanded="false">About Us</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="poverty.html">No Poverty</a></li>
+                                <li><a class="dropdown-item" href="hunger.html">Zero Hunger</a></li>
+                                <li><a class="dropdown-item" href="cow.html">Cow Seva</a></li>
+                                <li><a class="dropdown-item" href="veda.html">Veda/Sanskrit Education</a></li>
+                                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                aria-expanded="false">Projects</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="sanitation.html">Clean Water Sanitation</a></li>
+                                <li><a class="dropdown-item" href="climate.html">Climate Action</a></li>
+                                <!-- <li><a class="dropdown-item" href="cow.html">Cow Seva</a></li> -->
+                                <!-- <li><a class="dropdown-item" href="veda.html">Veda/Sanskrit Education</a></li> -->
+                                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">Our Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact_us.html">Contact Us</a>
+                        </li>
 
-          <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-              <div class="navbar-brand col-lg-3 me-0" href="#"><img class="logo" src="img/TUSTI.png" alt=""></div>
-              <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                  <li class="nav-item">
-                      <a class="nav-link " aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="aim.html" data-bs-toggle="dropdown"
-                          aria-expanded="false">About Us</a>
-                      <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="poverty.html">No Poverty</a></li>
-                          <li><a class="dropdown-item" href="hunger.html">Zero Hunger</a></li>
-                          <li><a class="dropdown-item" href="cow.html">Cow Seva</a></li>
-                          <li><a class="dropdown-item" href="veda.html">Veda/Sanskrit Education</a></li>
-                          <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-                      </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                          aria-expanded="false">Projects</a>
-                      <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="sanitation.html">Clean Water Sanitation</a></li>
-                          <li><a class="dropdown-item" href="climate.html">Climate Action</a></li>
-                          <!-- <li><a class="dropdown-item" href="cow.html">Cow Seva</a></li> -->
-                          <!-- <li><a class="dropdown-item" href="veda.html">Veda/Sanskrit Education</a></li> -->
-                          <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-                      </ul>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" href="gallery.html">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="team.html">Our Team</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact_us.html">Contact Us</a>
-                  </li>
-
-              </ul>
-              <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                  <button class="btn donatenow" onclick="window.location.href='donation.html'">DONATE NOW</button>
-              </div>
-          </div>
-      </div>
-  </nav>
-</div>
+                    </ul>
+                    <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                        <button class="btn donatenow" onclick="window.location.href='donation.html'">DONATE
+                            NOW</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </header>
 
     <main>
 
